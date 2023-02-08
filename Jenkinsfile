@@ -7,7 +7,7 @@ pipeline{
         CREDENTIALS_ID = 'My Project 16902'
         DOCKERHUB_CREDENTIALS = credentials('docker')
     }
-
+stages {
         stage('Build App'){
             steps{
                 sh './mvnw clean package'
@@ -42,6 +42,7 @@ pipeline{
 		   echo "Deployment Finished ..."
         }
        }
+}
 
     
 }
